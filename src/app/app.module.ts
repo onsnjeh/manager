@@ -11,7 +11,6 @@ import { NbreTicketTotalComponent } from './nbre-ticket-total/nbre-ticket-total.
 import { NbreTicketOuvertComponent } from './nbre-ticket-ouvert/nbre-ticket-ouvert.component';
 import { NbreTicketFermeComponent } from './nbre-ticket-ferme/nbre-ticket-ferme.component';
 import { NbreDocumentComponent } from './nbre-document/nbre-document.component';
-import { NbreVisiteurComponent } from './nbre-visiteur/nbre-visiteur.component';
 import { NbreClientComponent } from './nbre-client/nbre-client.component';
 import { NbreExpertComponent } from './nbre-expert/nbre-expert.component';
 import { ListTicketDernierComponent } from './list-ticket-dernier/list-ticket-dernier.component';
@@ -34,8 +33,8 @@ import { NomExpertComponent } from './nom-expert/nom-expert.component';
 import { ThemeComponent } from './theme/theme.component';
 import { ListCategoryComponent } from './list-category/list-category.component';
 import { FormsModule } from '@angular/forms';
+import {HttpClientModule}from '@angular/common/http'
 import { PriorityComponent } from './priority/priority.component';
-
 
 @NgModule({
   declarations: [
@@ -48,7 +47,6 @@ import { PriorityComponent } from './priority/priority.component';
     NbreTicketOuvertComponent,
     NbreTicketFermeComponent,
     NbreDocumentComponent,
-    NbreVisiteurComponent,
     NbreClientComponent,
     NbreExpertComponent,
     ListTicketDernierComponent,
@@ -79,7 +77,8 @@ import { PriorityComponent } from './priority/priority.component';
      FormsModule,
      NgbModule,
      NgbCollapseModule,
-     NgbNavModule
+     NgbNavModule,
+     HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

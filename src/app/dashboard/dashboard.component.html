@@ -35,7 +35,7 @@
                         <small class="link-light">list ticket</small>
                     </a>
                 </li>
-               
+
                 <li>
                     <a [routerLink]="['/manager/list-expert']">
                         <span><i class="bi bi-list"></i>
@@ -43,7 +43,7 @@
                         <small class="link-light">list expert </small>
                     </a>
                 </li>
-                
+
                 <li>
                     <a href="">
                         <span><i class="bi bi-person"></i>
@@ -63,15 +63,15 @@
     <main>
         <div class="page-header">
 
-        <div class="row">
-            <div class="col-4">
-             <h1>Dashboard</h1>
-             <small>Home / Dashboard</small>
+            <div class="row">
+                <div class="col-4">
+                    <h1>Dashboard</h1>
+                    <small>Home / Dashboard</small>
+                </div>
+                <div class="col-8">
+                    <app-bouton-add-document></app-bouton-add-document>
+                </div>
             </div>
-            <div class="col-8">
-             <app-bouton-add-document></app-bouton-add-document>
-            </div>
-           </div>
         </div>
         <div class="page-content">
             <app-carts></app-carts>
@@ -79,22 +79,32 @@
                 <li ngbNavItem="list-article-dernier">
                     <a ngbNavLink>Dernier Document</a>
                     <ng-template ngbNavContent>
-                        <app-list-article-dernier></app-list-article-dernier>
+                        <div *ngFor='let item1 of item1'>
+
+
+                            <app-list-article-dernier [item1]="item1"></app-list-article-dernier>
+
+                        </div>
                     </ng-template>
                 </li>
                 <li ngbNavItem="list-ticket-dernier">
                     <a ngbNavLink>Dernier Tickets</a>
                     <ng-template ngbNavContent>
-                        <app-list-ticket-dernier></app-list-ticket-dernier>
+                        <div *ngFor='let item5 of item5'>
+                            <app-list-ticket-dernier [item5]="item5"></app-list-ticket-dernier>
+
+                        </div>
 
                     </ng-template>
                 </li>
-               
-                <li ngbNavItem="list-expert-dernier">
-                    <a ngbNavLink>Dernier Expert</a>
-                    <ng-template ngbNavContent>
-                        <app-list-expert-dernier></app-list-expert-dernier>
 
+                <li ngbNavItem="list-expert-dernier">
+                    <a ngbNavLink>Expert</a>
+                    <ng-template ngbNavContent>
+                        <div *ngFor='let item3 of item3'>
+                            <app-list-expert-dernier [item3]="item3"></app-list-expert-dernier>
+
+                        </div>
                     </ng-template>
                 </li>
             </ul>

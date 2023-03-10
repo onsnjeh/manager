@@ -20,17 +20,18 @@
             </thead>
 
             <tbody>
-                <tr *ngFor="let country of countries; index as i">
-                    <th scope="row">{{ i + 1 }}</th>
+                <tr >
+                    <td scope="row">{{ item3.id }}</td>
                     <td>
                         <!-- <img class="bg-img" style="background-image: url(https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png)"/> -->
 
-                        {{ country.name }}
+                        {{ item3.nom }}
                     </td>
-                    <td>{{ country.category }}</td>
-                    <td>{{ country.Specialite }}</td>
-                    <td>{{ country.Nombre_de_ticket }}</td>
-                    <td>{{ country.Nombre_de_document }}</td>
+                    <td>{{ item3.category }}</td>
+                    <td>{{ item3.specialite }}</td>
+                    <td>{{ item3.nombre_ticket }}</td>
+                    <td>{{ item3.nombre_document }}</td>
+
                     <td><app-bouton-open></app-bouton-open></td>
 
                 </tr>
